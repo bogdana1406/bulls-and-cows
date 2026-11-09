@@ -46,4 +46,16 @@ describe('round state', () => {
     expect(rankRecords(previous, newRecord, 1)).toEqual([newRecord]);
     expect(previous).toHaveLength(1);
   });
+
+  it('uses elapsed time to break an attempts tie', () => {
+    const slower: RecordEntry = {
+      length: 3,
+      base: 8,
+      attempts: 2,
+      durationMs: 9000,
+      achievedAt: 1,
+    };
+    const faster: RecordEntry = { ...slower, durationMs: 4000, achievedAt: 2 };
+    expect(rankRecords([slower], faster)).toEqual([faster, slower]);
+  });
 });
