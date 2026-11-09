@@ -1,4 +1,4 @@
-# Bulls and Cows
+# Быки и коровы
 
 Игра «Быки и коровы» на TypeScript: четыре системы счисления, история попыток и локальная таблица рекордов.
 
@@ -11,6 +11,10 @@ python3 -m http.server 4173 --directory dist
 ```
 
 Откройте `http://localhost:4173`. Для проверки кода доступны `npm test`, `npm run lint` и `npm run format:check`.
+
+## Деплой
+
+[Играть на Cloudflare Pages](https://bulls-and-cows-5na.pages.dev/). Сайт автоматически собирается из ветки `bulls-and-cows`: команда `npm run build`, выходная папка `dist`.
 
 ## Структура
 
